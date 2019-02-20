@@ -338,7 +338,7 @@ via the \`definition\` "${key}".`
   switch (schema.additionalProperties) {
     case undefined:
     case true:
-      if (singlePatternProperty) {
+      if (singlePatternProperty || options.noAdditionalPropertiesIndexing) {
         return asts
       }
       return asts.concat({
